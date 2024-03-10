@@ -6,11 +6,42 @@ import { PiArrowLeftThin, PiArrowRightThin } from 'react-icons/pi';
 interface IntroBarProps {
     spanWidth: number;
 }
+interface AreaDtProps {
+    id: number;
+    content: string;
+}
+const contentArea: AreaDtProps[] = [
+    {
+        id: 1,
+        content: '"인천 시민들의 삶을 완전히 바꿔놓을 GTX-B, 대통령이 직접 챙길 것"',
+    },
+    {
+        id: 2,
+        content: '"인천의 바다, 하늘, 땅 모두를 바꿔놓겠습니다"',
+    },
+    {
+        id: 3,
+        content: '"전공의 이탈로 비상의료체계 가동하는 현실은 비정상적"',
+    },
+];
 const MainTitle = () => {
     const [spanWidth, setSpanWidth] = useState<number>(4.7);
+    const [currentId, setCurrentId] = useState(1);
+
+    const handleClickPrevious = () => {
+        if (currentId > 1) {
+            setCurrentId(currentId - 1);
+        }
+    };
+
+    const handleClickNext = () => {
+        if (currentId < contentArea.length) {
+            setCurrentId(currentId + 1);
+        }
+    };
 
     const onClickRightHandler = () => {
-        // 값을 24rem 씩 늘리기 위해 현재 rem 값을 px로 변환한다고 가정하고 계산
+        handleClickPrevious();
         setSpanWidth((prevWidth) => {
             const newWidth = prevWidth + 4.7;
             const maxWidthPx = 370;
@@ -26,15 +57,15 @@ const MainTitle = () => {
         });
     };
     const onClickLeftHandler = () => {
-        // 값을 24rem 씩 늘리기 위해 현재 rem 값을 px로 변환한다고 가정하고 계산
+        handleClickNext();
+        handleClickPrevious();
         setSpanWidth((prevWidth) => {
             const newWidth = prevWidth - 4.8;
             const minWidthPx = newWidth * 16;
-            // 최대 너비 확인
+
             const newWidthPx = newWidth * 16; // rem 값을 px로 변환
             if (newWidthPx < minWidthPx) {
-                // 최소 너비를 초과했다면 maxWidthPx에 맞춰서 rem으로 다시 계산
-                return 370; // px 값을 rem으로 변환
+                return 370;
             }
 
             // 최대 너비를 초과하지 않았을 경우, 업데이트된 width 반환
@@ -46,13 +77,11 @@ const MainTitle = () => {
         <Section>
             <Content>
                 <div className="textArea">
-                    <MainTex className="animate-intro">
-                        "전공의 이탈로
-                        <br />
-                        비상의료체계 가동하는 현실은 비정상적"
+                    <MainTex className="animate-intro relative h-24 w-[50rem]">
+                        {contentArea.find((area) => area.id === currentId)?.content}
                     </MainTex>
                 </div>
-                <IntroBarWrapper className="flex items-center relative justify-between">
+                <IntroBarWrapper className="flex items-center  pt-16 relative justify-between">
                     <p className="intro-bar border-b border-indigo-10 mr-7 w-[370px]">
                         <IntroBar spanWidth={spanWidth}></IntroBar>
                     </p>
@@ -127,7 +156,7 @@ const Content = styled.article`
 
 const IntroImg = styled.div`
     position: relative;
-    top: 100px;
+    top: 50px;
     border-radius: 30px 30px 0px 0px;
     img {
         border-radius: 30px 30px 0px 0px;
