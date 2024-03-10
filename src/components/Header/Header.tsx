@@ -16,7 +16,6 @@ const Header = () => {
                     <nav className="absolute top-0 right-0">
                         <a
                             href="https://eng.president.go.kr/"
-                            target="_blank"
                             className="btn_language"
                             title="대통령실 영문 홈페이지 바로가기"
                         >
@@ -78,7 +77,7 @@ const Header = () => {
                             </a>
                         </li>
                         <li className="li_child">
-                            <a href="https://withpeople.president.go.kr/" target="_blank" title="새창열림">
+                            <a href="https://withpeople.president.go.kr/" title="새창열림">
                                 국민제안
                             </a>
                         </li>
