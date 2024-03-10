@@ -40,37 +40,32 @@ const MainTitle = () => {
         }
     };
 
-    const onClickRightHandler = () => {
-        handleClickPrevious();
+    const onClickRightHandler = () => { // 오른쪽으로 그래프 바 확장
+       
         setSpanWidth((prevWidth) => {
             const newWidth = prevWidth + 4.7;
             const maxWidthPx = 370;
-            // 최대 너비 확인
-            const newWidthPx = newWidth * 16; // rem 값을 px로 변환
+           
+            const newWidthPx = newWidth * 16; 
             if (newWidthPx > maxWidthPx) {
-                // 최대 너비를 초과했다면 maxWidthPx에 맞춰서 rem으로 다시 계산
-                return maxWidthPx / 16; // px 값을 rem으로 변환
+                return maxWidthPx / 16; 
             }
-
-            // 최대 너비를 초과하지 않았을 경우, 업데이트된 width 반환
             return newWidth;
         });
+         handleClickPrevious();
     };
     const onClickLeftHandler = () => {
-        handleClickNext();
-        handleClickPrevious();
         setSpanWidth((prevWidth) => {
             const newWidth = prevWidth - 4.8;
             const minWidthPx = newWidth * 16;
 
-            const newWidthPx = newWidth * 16; // rem 값을 px로 변환
+            const newWidthPx = newWidth * 16; 
             if (newWidthPx < minWidthPx) {
                 return 370;
             }
-
-            // 최대 너비를 초과하지 않았을 경우, 업데이트된 width 반환
             return newWidth;
         });
+        handleClickNext();
     };
 
     return (
