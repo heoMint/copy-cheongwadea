@@ -77,16 +77,16 @@ const ImgWrapper = styled.div`
     display: flex;
     justify-content: center;
     margin: 0 45px;
-    background-color: aquamarine;
 `;
 const Img = styled.img`
     margin: 0 20px;
-    width: 30%;
+    width: 20%;
     background-size: cover;
     backface-visibility: hidden;
     will-change: transform;
     transition: all 2s;
     border-radius: 10px;
+    transition: transform 0.5s ease-in-out;
 `;
 
 // 오른쪽 왼쪽 버튼을 눌러 슬라이드 앞뒤로 넘기기

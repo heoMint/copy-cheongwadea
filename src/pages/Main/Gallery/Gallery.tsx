@@ -1,11 +1,11 @@
-import Line from '../../components/Line/Line';
+import Line from '../../../components/Line/Line';
 import GalleryTap from './GalleryTap';
 import GalleryTapCont from './GalleryTapCont';
 import styled from 'styled-components';
 
 const Gallery = () => {
     return (
-        <GalleryWrapper>
+        <GalleryWrapper >
             <Border className="mt-10 ">
                 <Line />
                 <div className="flex mb-3"></div>

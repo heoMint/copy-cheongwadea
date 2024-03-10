@@ -1,16 +1,11 @@
 import Header from './components/Header/Header';
-import MainTitle from './pages/Intro/Intro';
-import Gallery from './pages/Gallery/Gallery';
-import SubTitle from './pages/SubTitle/SubTitle';
-
+import Main from './pages/Main/Main';
 
 function App() {
     return (
         <div>
             <Header />
-            <MainTitle />
-            <Gallery />
-            <SubTitle />
+            <Main />
         </div>
     );
 }

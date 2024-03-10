@@ -3,7 +3,7 @@ import RightArea from './RightArea';
 const GalleryTapCont = () => {
     return (
         <TapContWrapper>
-            <TopCont>
+            <TopCont className="animate-intro">
                 <InnerLeft>
                     <img
                         className="rounded-lg"

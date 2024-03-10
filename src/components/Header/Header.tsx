@@ -38,37 +38,52 @@ const Header = () => {
                     </h1>
                     <ul className="ul_wrapper">
                         <li className="li_child">
-                            <a href="/president/greeting" title="클릭 시 대한민국 대통령 메뉴로 이동합니다.">
+                            <a
+                                href="https://www.president.go.kr/president/greeting"
+                                title="클릭 시 대한민국 대통령 메뉴로 이동합니다."
+                            >
                                 대한민국 대통령
                             </a>
                         </li>
                         <li className="li_child">
-                            <a href="/yongsan_office/open_office" title="클릭 시 대통령실 메뉴로 이동합니다.">
+                            <a
+                                href="https://www.president.go.kr/yongsan_office/open_office"
+                                title="클릭 시 대통령실 메뉴로 이동합니다."
+                            >
                                 대통령실
                             </a>
                         </li>
                         <li className="li_child">
-                            <a href="/affairs/vision" title="클릭 시 국정과제 메뉴로 이동합니다.">
+                            <a
+                                href="https://www.president.go.kr/affairs/vision"
+                                title="클릭 시 국정과제 메뉴로 이동합니다."
+                            >
                                 국정과제
                             </a>
                         </li>
                         <li className="li_child">
-                            <a href="/newsroom" title="클릭 시 대통령실 뉴스룸 메뉴로 이동합니다.">
+                            <a
+                                href="https://www.president.go.kr/newsroom"
+                                title="클릭 시 대통령실 뉴스룸 메뉴로 이동합니다."
+                            >
                                 대통령실 뉴스룸
                             </a>
                         </li>
                         <li className="li_child">
-                            <a href="/open/process" title="클릭 시 정보공개 메뉴로 이동합니다.">
+                            <a
+                                href="https://www.president.go.kr/open/process"
+                                title="클릭 시 정보공개 메뉴로 이동합니다."
+                            >
                                 정보공개
                             </a>
                         </li>
                         <li className="li_child">
-                            <a href="https://withpeople.president.go.kr" target="_blank" title="새창열림">
+                            <a href="https://withpeople.president.go.kr/" target="_blank" title="새창열림">
                                 국민제안
                             </a>
                         </li>
                     </ul>
-                    <div className="flex" >
+                    <div className="flex">
                         <button
                             type="button"
                             className="btn_topSearch"

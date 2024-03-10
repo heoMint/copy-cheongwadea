@@ -1,11 +1,9 @@
-
 import SubImg from './SubImg';
 import styled from 'styled-components';
 
 const SubTitle = () => {
     return (
-        <SubTitleWrapper>
-            <div></div>
+        <SubTitleWrapper className="animate-intro">
             <div>
                 <SubImg />
             </div>
