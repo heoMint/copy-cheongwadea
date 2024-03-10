@@ -3,40 +3,8 @@ import { styled } from 'styled-components';
 import { PiArrowLeftThin, PiArrowRightThin } from 'react-icons/pi';
 import Line from '../../../components/Line/Line';
 export const LastArea = () => {
-    const [spanWidth, setSpanWidth] = useState<number>(4.7);
 
-    const onClickRightHandler = () => {
-        // 값을 24rem 씩 늘리기 위해 현재 rem 값을 px로 변환한다고 가정하고 계산
-        setSpanWidth((prevWidth) => {
-            const newWidth = prevWidth + 4.7;
-            const maxWidthPx = 370;
-            // 최대 너비 확인
-            const newWidthPx = newWidth * 16; // rem 값을 px로 변환
-            if (newWidthPx > maxWidthPx) {
-                // 최대 너비를 초과했다면 maxWidthPx에 맞춰서 rem으로 다시 계산
-                return maxWidthPx / 16; // px 값을 rem으로 변환
-            }
 
-            // 최대 너비를 초과하지 않았을 경우, 업데이트된 width 반환
-            return newWidth;
-        });
-    };
-    const onClickLeftHandler = () => {
-        // 값을 24rem 씩 늘리기 위해 현재 rem 값을 px로 변환한다고 가정하고 계산
-        setSpanWidth((prevWidth) => {
-            const newWidth = prevWidth - 4.8;
-            const minWidthPx = newWidth * 16;
-            // 최대 너비 확인
-            const newWidthPx = newWidth * 16; // rem 값을 px로 변환
-            if (newWidthPx < minWidthPx) {
-                // 최소 너비를 초과했다면 maxWidthPx에 맞춰서 rem으로 다시 계산
-                return 370; // px 값을 rem으로 변환
-            }
-
-            // 최대 너비를 초과하지 않았을 경우, 업데이트된 width 반환
-            return newWidth;
-        });
-    };
     return (
         <div className="grid relative top-60">
             <div>
@@ -49,12 +17,12 @@ export const LastArea = () => {
                             <Line />
                         </div>
                         <ButtonWrapper className="buttonBox mr-5 ">
-                            <button onClick={onClickLeftHandler}>
+                            <button>
                                 <PiArrowLeftThin className="size-8  hover:text-beige transition" />
                             </button>
                         </ButtonWrapper>
                         <ButtonWrapper className="buttonBox">
-                            <button onClick={onClickRightHandler}>
+                            <button>
                                 <PiArrowRightThin className="size-8 hover:text-beige transition" />
                             </button>
                         </ButtonWrapper>
