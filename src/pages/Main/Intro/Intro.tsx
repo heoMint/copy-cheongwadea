@@ -28,20 +28,21 @@ const MainTitle = () => {
     const [spanWidth, setSpanWidth] = useState<number>(4.7);
     const [currentId, setCurrentId] = useState(1);
 
+    // 버튼 클릭 시 prevArea로 넘어가는 함수
     const handleClickPrevious = () => {
         if (currentId > 1) {
             setCurrentId(currentId - 1);
         }
     };
-
+    // 버튼 클릭 시 NextArea로 넘어가는 함수
     const handleClickNext = () => {
         if (currentId < contentArea.length) {
             setCurrentId(currentId + 1);
         }
     };
 
-    const onClickRightHandler = () => { // 오른쪽으로 그래프 바 확장
-       
+    // 오른쪽 버튼을 누르면 오른쪽으로 그래프가 확장되는 함수
+    const onClickRightHandler = () => {
         setSpanWidth((prevWidth) => {
             const newWidth = prevWidth + 4.7;
             const maxWidthPx = 370;
@@ -54,6 +55,7 @@ const MainTitle = () => {
         });
          handleClickPrevious();
     };
+    // 왼쪽 버튼을 누르면 왼쪽으로 그래프가 확장되는 함수
     const onClickLeftHandler = () => {
         setSpanWidth((prevWidth) => {
             const newWidth = prevWidth - 4.8;
