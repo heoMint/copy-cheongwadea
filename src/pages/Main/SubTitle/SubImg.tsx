@@ -15,6 +15,7 @@ const SubImg = () => {
         setSelected((prevSelected) => (prevSelected + 1) % lastIndex);
     };
 
+    // 이미지 목업 데이터
     const renderImages = () => {
         const images = [
             'https://www.president.go.kr/images/2023/12/EALPnSrdYBTr657b9a725b9f53.03803026.jpg',
@@ -29,6 +30,8 @@ const SubImg = () => {
 
         const startIndex = selected;
         const endIndex = (startIndex + pageSize) % lastIndex;
+        // 페이지 단위로 이미지를 표시
+        // slice메서드를 사용해 현재페이지의 이미지를 추출 후 map 메서드로 이미지를 컴포넌트로 변환
         if (startIndex <= endIndex) {
             return images
                 .slice(startIndex, endIndex + 1)
