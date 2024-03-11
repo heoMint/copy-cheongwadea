@@ -18,14 +18,14 @@ const SubImg = () => {
     // 이미지 목업 데이터
     const renderImages = () => {
         const images = [
-            'https://www.president.go.kr/images/2023/12/EALPnSrdYBTr657b9a725b9f53.03803026.jpg',
-            'https://www.president.go.kr/images/2023/12/L1wysckCsVH0657b9aa6cd53f1.04417040.jpg',
-            'https://www.president.go.kr/images/2023/12/azb6FGE18NrM657b9b5c82e064.52309177.jpeg',
-            'https://www.president.go.kr/images/2023/12/G4Bf8auJGjMx657b9b7c97fca5.11111305.jpg',
-            'https://www.president.go.kr/images/2023/12/f0JC0Cyt77TK657b9bb679ce82.88115336.jpg',
-            'https://www.president.go.kr/images/2023/12/qG8fd29Ftpbu657b9c47ae8288.44839582.jpg',
-            'https://www.president.go.kr/images/2023/12/PqS4dDA0ljWs657b9c7b560716.97124706.jpg',
-            'https://www.president.go.kr/images/2023/12/kqH0wAgWqRcd657b9cb705ae97.10646713.jpg',
+            'https://images.pexels.com/photos/2026960/pexels-photo-2026960.jpeg?auto=compress&cs=tinysrgb&w=600',
+            'https://images.pexels.com/photos/1643457/pexels-photo-1643457.jpeg?auto=compress&cs=tinysrgb&w=600',
+            'https://images.pexels.com/photos/4464377/pexels-photo-4464377.jpeg?auto=compress&cs=tinysrgb&w=600',
+            'https://images.pexels.com/photos/6898856/pexels-photo-6898856.jpeg?auto=compress&cs=tinysrgb&w=600',
+            'https://images.pexels.com/photos/4588065/pexels-photo-4588065.jpeg?auto=compress&cs=tinysrgb&w=600',
+            'https://images.pexels.com/photos/3687957/pexels-photo-3687957.jpeg?auto=compress&cs=tinysrgb&w=600',
+            'https://images.pexels.com/photos/4197560/pexels-photo-4197560.jpeg?auto=compress&cs=tinysrgb&w=600',
+            'https://images.pexels.com/photos/3616232/pexels-photo-3616232.jpeg?auto=compress&cs=tinysrgb&w=600',
         ];
 
         const startIndex = selected;

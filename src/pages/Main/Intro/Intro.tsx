@@ -13,15 +13,15 @@ interface AreaDtProps {
 const contentArea: AreaDtProps[] = [
     {
         id: 1,
-        content: '"인천 시민들의 삶을 완전히 바꿔놓을 GTX-B, 대통령이 직접 챙길 것"',
+        content: '"안녕하세요. 허도원 입니다."',
     },
     {
         id: 2,
-        content: '"인천의 바다, 하늘, 땅 모두를 바꿔놓겠습니다"',
+        content: '"오른쪽버튼 왼쪽버튼 클릭"',
     },
     {
         id: 3,
-        content: '"전공의 이탈로 비상의료체계 가동하는 현실은 비정상적"',
+        content: '"버튼을 눌러 content를 확인하세요"',
     },
 ];
 const MainTitle = () => {
@@ -46,28 +46,28 @@ const MainTitle = () => {
         setSpanWidth((prevWidth) => {
             const newWidth = prevWidth + 4.7;
             const maxWidthPx = 370;
-           
-            const newWidthPx = newWidth * 16; 
+
+            const newWidthPx = newWidth * 16;
             if (newWidthPx > maxWidthPx) {
-                return maxWidthPx / 16; 
+                return maxWidthPx / 16;
             }
             return newWidth;
         });
-         handleClickPrevious();
+        handleClickNext();
     };
     // 왼쪽 버튼을 누르면 왼쪽으로 그래프가 확장되는 함수
     const onClickLeftHandler = () => {
         setSpanWidth((prevWidth) => {
             const newWidth = prevWidth - 4.8;
             const minWidthPx = newWidth * 16;
-
-            const newWidthPx = newWidth * 16; 
+            const newWidthPx = newWidth * 16;
             if (newWidthPx < minWidthPx) {
                 return 370;
             }
             return newWidth;
         });
-        handleClickNext();
+
+        handleClickPrevious();
     };
 
     return (
